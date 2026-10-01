@@ -3,47 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>معلم دهانات مكة الشرائع - 0536715027</title>
+<title>معلم دهانات مكة الشرائع 0536715027</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:sans-serif;background:#f6f7f9}
-.h{background:linear-gradient(135deg,#0d47a1,#1976d2);color:#fff;padding:36px 20px;text-align:center}
-.btn{display:inline-block;background:#25D366;color:#fff;padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:bold;margin:8px;font-size:18px}
+*{box-sizing:border-box}body{margin:0;font-family:sans-serif;background:#f6f7f9;color:#222}
+.h{background:linear-gradient(135deg,#0d47a1,#1976d2);color:#fff;padding:30px 20px;text-align:center}
+.btn{display:inline-block;background:#25D366;color:#fff;padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:bold;margin:8px}
 .btn2{background:#ff9800}.c{max-width:1100px;margin:auto;padding:16px}
-.card{background:#fff;padding:22px;border-radius:14px;margin:18px 0}
-.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
-.g img{width:100%;height:300px;object-fit:cover;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.card{background:#fff;padding:20px;border-radius:14px;margin:16px 0}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.g img{width:100%;height:280px;object-fit:cover;border-radius:12px}
 </style>
 </head>
 <body>
 <div class="h">
-<h1>معلم دهانات مكة - حي الشرائع</h1>
+<h1>معلم دهانات مكة - الشرائع</h1>
 <p>دهانات داخلية وخارجية | ورق جدران | جبس بورد</p>
 <a class="btn" href="https://wa.me/966536715027">واتساب 0536715027</a>
-<a class="btn btn2" href="tel:0536715027">اتصال الآن</a>
+<a class="btn btn2" href="tel:0536715027">اتصال</a>
 </div>
 <div class="c">
 <div class="card">
-<h2>📸 من أعمالنا الحقيقية في مكة</h2>
-<div class="g" id="gallery"><p>جاري تحميل الصور...</p></div>
+<h2>📸 من أعمالنا في مكة</h2>
+<div class="g" id="gallery">جاري التحميل...</div>
 </div>
 <div class="card" style="text-align:center;background:#e3f2fd">
-<h2>تبغى نفس الشغل النظيف؟</h2>
-<a class="btn" href="https://wa.me/966536715027?text=السلام عليكم شفت موقعك">راسلني واتساب الآن</a>
-<p><b>📞 0536715027</b></p>
+<h3>تبغى نفس الشغل؟</h3>
+<a class="btn" href="https://wa.me/966536715027">راسلني واتساب</a>
 </div>
 </div>
 <script>
 async function loadImages(){
-  const res = await fetch('https://api.github.com/repos/gvugigvi654321-source/ma3lem-dehanat-makkah2/contents');
-  const files = await res.json();
-  const imgs = files.filter(f=> f.name.match(/\.(jpg|jpeg|png)$/i) );
-  const gal = document.getElementById('gallery');
-  gal.innerHTML='';
-  imgs.forEach(f=>{
-    const img=document.createElement('img');
-    img.src=f.download_url;
-    gal.appendChild(img);
-  });
+ const r=await fetch('https://api.github.com/repos/gvugigvi654321-source/ma3lem-dehanat-makkah2/contents');
+ const files=await r.json();
+ const imgs=files.filter(f=>f.name.match(/\.(jpg|jpeg|png)$/i));
+ const g=document.getElementById('gallery');g.innerHTML='';
+ imgs.forEach(f=>{let i=document.createElement('img');i.src=f.download_url;g.appendChild(i);});
 }
 loadImages();
 </script>
